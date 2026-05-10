@@ -1,0 +1,302 @@
+:root {
+    --primary: #1e3a8a;
+    --secondary: #3b82f6;
+    --accent: #f59e0b;
+    --bg-light: #f8fafc;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Desplazamiento suave al hacer clic en los enlaces */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+}
+
+
+.hero {
+    height: 100vh;
+    /* Ocupa toda la pantalla */
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.8)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+    margin-top: 60px;
+    /* Compensa la navbar fija */
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #d97706;
+    transform: translateY(-3px);
+}
+
+
+.directorio-section {
+    padding: 6rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.directorio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.marca-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.marca-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary);
+}
+
+.card-header {
+    padding: 1.5rem 1.5rem 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-logistica {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.badge-retail {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.badge-entret {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.badge-salud {
+    background: #fce7f3;
+    color: #be185d;
+}
+
+.badge-impresion {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+.badge-ecommerce {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.descripcion {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.info-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.info-list li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list strong {
+    color: var(--text-main);
+}
+
+.tech-req {
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--primary);
+    border-left: 4px solid var(--secondary);
+    margin-top: auto;
+}
+
+
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad extra */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
